@@ -17,6 +17,7 @@ This exam will test your basic CRUD (Create, Read, Update, Delete) implementatio
 GLHF!
 
 ## How to run
+- Run `composer install`
 - Create a database `person_list`
 - Import the `schema.sql` located at `module/profile/schema.sql`
 - Set your database credentials to `config/services.php`

@@ -1,0 +1,48 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <span class="pull-right">
+            <a href="/profile/create" class="btn btn-default btn-xs">
+                <i class="glyphicon glyphicon-plus"></i>
+                New Person
+            </a>
+        </span>
+        <h3 class="panel-title">
+            <i class="glyphicon glyphicon-user"></i>
+            Person List
+        </h3>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if rows}}
+            {{#each rows}}
+            <tr>
+                <td>{{profile_first}}</td>
+                <td>{{profile_last}}</td>
+                <td>{{profile_email}}</td>
+                <td align="right">
+                    <a href="/profile/update/{{profile_id}}" class="btn btn-default btn-xs">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                        Edit
+                    </a>
+                    <a href="/profile/remove/{{profile_id}}" class="btn btn-default btn-xs"
+                    onClick="if(confirm('Delete person?')) return true; else return false;">
+                        <i class="glyphicon glyphicon-trash"></i>
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            {{/each}}
+            {{else}}
+            <tr class="text-center"><td colspan="4">No Data Found</td></tr>
+            {{/if}}
+        </tbody>
+    </table>
+</div>

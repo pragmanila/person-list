@@ -1,0 +1,24 @@
+{
+    "name": "cradlephp/kitchen-sink",
+    "description": "Flow samples and testing",
+    "type": "framework",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "homepage": "https://cradlephp.github.io/",
+    "authors": [
+        {
+            "name": "Christian Blanquera",
+            "email": "cblanquera@openovate.com"
+        }
+    ],
+    "require": {
+        "cradlephp/packages": "dev-master",
+        "cblanquera/cradle-handlebars": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cradle\\Module\\Profile\\": "module/profile/src/",
+            "Cradle\\Module\\Utility\\": "module/utility/src/"
+        }
+    }
+}

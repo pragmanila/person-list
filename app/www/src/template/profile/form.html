@@ -1,0 +1,44 @@
+{{#if errors}}
+<aside class="alert alert-danger">
+    Person not saved.
+    <ul>
+        {{#if errors.profile_first}}
+        <li>{{errors.profile_first}}</li>
+        {{/if}}
+        {{#if errors.profile_last}}
+        <li>{{errors.profile_last}}</li>
+        {{/if}}
+        {{#if errors.profile_email}}
+        {{#each errors.profile_email}}
+        <li>{{this}}</li>
+        {{/each}}
+        {{/if}}
+    </ul>
+</aside>
+{{/if}}
+
+<div class="panel-body">
+    <form method="post">
+        <div class="form-group{{#if errors.profile_first}} has-error{{/if}}">
+            <label for="profile_first">First Name</label>
+            <input type="text" class="form-control" id="profile_first" name="profile_first" 
+                value="{{item.profile_first}}" placeholder="First Name">
+        </div>
+        <div class="form-group{{#if errors.profile_last}} has-error{{/if}}">
+            <label for="profile_last">Last Name</label>
+            <input type="text" class="form-control" id="profile_last" name="profile_last" 
+                value="{{item.profile_last}}" placeholder="Last Name">
+        </div>
+        <div class="form-group{{#if errors.profile_email}} has-error{{/if}}">
+            <label for="profile_email">Email Address</label>
+            <input type="email" class="form-control" id="profile_email" name="profile_email" 
+                value="{{item.profile_email}}" placeholder="Email Address">
+        </div>
+        <center>
+            <button type="submit" class="btn btn-default btn-lg">
+                <i class="glyphicon glyphicon-check"></i>
+                Submit
+            </button>
+        </center>
+    </form>
+</div>

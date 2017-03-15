@@ -15,3 +15,10 @@ This exam will test your basic CRUD (Create, Read, Update, Delete) implementatio
 - You can use any available framework that you are familiar with
 
 GLHF!
+
+## How to run
+- Create a database `person_list`
+- Import the `schema.sql` located at `module/profile/schema.sql`
+- Set your database credentials to `config/services.php`
+- If you're php7 run `php -S localhost:8888 -t public` on the your root folder
+- And Olah!
